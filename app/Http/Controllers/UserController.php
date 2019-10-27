@@ -45,12 +45,15 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\User  $user
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show($id)
     {
-        
+        if (!User::find($id)) {
+            return customResponse("User Not Found", null, "404");
+        }
+        return new UserResource(User::find($id));
     }
 
     /**
