@@ -23,7 +23,6 @@ cd uberpigeon
 
 ```bash
 cp .env.example .env
-php artisan key:generate
 ```
 
 Update .env and set according to your database connection (Please create an empty database and refer to this newly created database)
@@ -32,6 +31,7 @@ Update .env and set according to your database connection (Please create an empt
 
 ```bash
 composer install
+php artisan key:generate
 php artisan migrate:refresh --seed
 php artisan serve
 ```
