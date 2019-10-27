@@ -1,0 +1,307 @@
+{
+	"info": {
+		"_postman_id": "01ba5a53-6d43-42d2-8e11-d0ce00ea859e",
+		"name": "UberPigeon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						},
+						"description": "URI: /user/{userId}"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pigeon",
+			"item": [
+				{
+					"name": "Get All Pigeon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/pigeon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pigeon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Pigeon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/pigeon/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pigeon",
+								"1"
+							]
+						},
+						"description": "URI: /pigeon/{pigeonId}"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Pigeon",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/pigeon/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pigeon",
+								"6"
+							]
+						},
+						"description": "URI: /pigeon/{pigeonId}"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Pigeon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"status\":\"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/pigeon/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pigeon",
+								"1"
+							]
+						},
+						"description": "URI: /pigeon/{pigeonId}\n\nReq Body Param:\n\t- name (string)\n\t- speed (int)\n\t- range (int)\n\t- cost (int)\n\t- downtime (int)\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Pigeon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Pagi Malam\",\n\t\"speed\":\"100\",\n\t\"range\":\"600\",\n\t\"cost\":\"5\",\n\t\"downtime\":\"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/pigeon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pigeon"
+							]
+						},
+						"description": "Req Body Param:\n\t- name (string)\n\t- speed (int)\n\t- range (int)\n\t- cost (int)\n\t- downtime (int)\n"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Order is Received By Customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/order/received/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"order",
+								"received",
+								"1"
+							]
+						},
+						"description": "URI: /order/received/{orderId}\n\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Create an Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"distance\":3000,\n\t\"deadline\":\"2019-10-30 23:21:37\",\n\t\"user_id\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"order"
+							]
+						},
+						"description": "Req Body Param:\n\t- distance (int)\n\t- deadline (datetime)\n\t- user_id (int)\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an Order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/pigeon/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pigeon",
+								"6"
+							]
+						},
+						"description": "URI: /order/{ordernId}"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
