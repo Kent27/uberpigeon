@@ -23,9 +23,10 @@ cd uberpigeon
 
 ```bash
 cp .env.example .env
+php artisan key:generate
 ```
 
-Set according to your database connection (Please create an empty database and refer to this newly created database)
+Update .env and set according to your database connection (Please create an empty database and refer to this newly created database)
 
 ### **3. Install Dependencies And Run Migration**
 
@@ -37,10 +38,10 @@ php artisan serve
 
 ### **4. Testing Out API**
 
-Open your browser, or Postman.
-Since localhost:8000 is the default protocol and domain, try the uri below :
-`http://localhost:8000/api/user`
-If it returns JSON with users data then you're good to go.
+-   Open your browser, or Postman.
+-   Since localhost:8000 is the default protocol and domain, try this uri :
+    `http://localhost:8000/api/user`
+-   If it returns JSON with users data then you're good to go.
 
 ## API Documentation
 
